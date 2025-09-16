@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#8A2BE2" />
+  <title>EtN Shoote ♡ — Link Hub</title>
+  <meta name="description" content="CODM GIRLY 🎀 — Alle Links: Discord, TikTok, Turniere. Join die Anthrac¡te Fam." />
+  <meta property="og:title" content="EtN Shoote ♡ — Link Hub" />
+  <meta property="og:description" content="CODM GIRLY 🎀 — Alle Links: Discord, TikTok, Turniere." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://i.imgur.com/3G0fQeT.png" />
+  <meta property="og:url" content="https://deinname.github.io/" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Chakra+Petch:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-name: "EtN Shoote ♡";
+      --tagline: "CODM GIRLY 🎀";
+      --avatar-url: url('assets/avatar.png'); /* Lokales Bild */
+
+      --accent: #c77dff;     /* Violett */
+      --accent-2: #22d3ee;   /* Cyan */
+      --glow: #f0abfc;       /* Glow Pink-Lila */
+      
+      --bg-1: #0b0b12;       /* Dark Hintergrund */
+      --text: #e7e7ff;
+      --muted: #a2a2c7;
+      
+      --card: rgba(255,255,255,0.06);
+      --card-2: rgba(255,255,255,0.08);
+      
+      --maxw: 720px;
+      --radius: 20px;
+    }
+
+    *{box-sizing:border-box; margin:0; padding:0}
+    body{
+      height:100%;
+      background: radial-gradient(1200px 800px at 10% 10%, #1a1036 0%, transparent 60%),
+                  radial-gradient(900px 600px at 90% 0%, #09283b 0%, transparent 60%),
+                  radial-gradient(900px 600px at 80% 90%, #2a0a31 0%, transparent 60%),
+                  var(--bg-1);
+      font-family: Inter, sans-serif;
+      color:var(--text);
+      overflow-x:hidden
+    }
+
+    /* ===== Galaxy Background ===== */
+    #stars{position:fixed; top:0; left:0; width:100%; height:100%; z-index:-2;}
+    #stars canvas{width:100%; height:100%}
+
+    .aura{position:fixed; inset:-20vmax; z-index:-1; filter: blur(80px) saturate(150%); opacity:.6; pointer-events:none; animation: spin 40s linear infinite; background:conic-gradient(from 0deg, var(--accent), var(--accent-2), #ff4d6d, var(--accent))}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .wrap{min-height:100dvh; display:grid; place-items:center; padding:20px}
+    .container{width:100%; max-width:var(--maxw); background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius); backdrop-filter:blur(12px) saturate(140%); box-shadow:0 10px 40px rgba(0,0,0,.4); animation: fadeIn 1s ease}
+    @keyframes fadeIn{from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)}}
+
+    /* ===== Profile ===== */
+    header.profile{display:flex; gap:16px; padding:20px; align-items:center}
+    .pfp{width:80px; height:80px; border-radius:50%; background:var(--card); position:relative; overflow:hidden; box-shadow:0 0 30px var(--glow); animation:pulse 4s infinite; cursor:pointer}
+    @keyframes pulse{0%,100%{box-shadow:0 0 20px var(--accent)} 50%{box-shadow:0 0 50px var(--accent-2)}}
+    .pfp::before{content:""; position:absolute; inset:0; background-image:var(--avatar-url); background-size:cover; background-position:center}
+    .meta{display:grid; gap:4px}
+    .name{font:800 24px/1.1 "Chakra Petch", Inter; letter-spacing:.5px; color:var(--accent)}
+    .tagline{font-size:14px; color:var(--muted)}
+    .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+    .badge{font-size:12px; padding:6px 12px; border-radius:999px; background:linear-gradient(180deg, var(--card-2), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,.12); color:var(--text)}
+
+    /* ===== Links ===== */
+    .section{padding:6px 20px; font-weight:800; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); opacity:.9}
+    .grid{display:grid; gap:14px; padding:16px}
+    .link{display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:14px; padding:18px; border-radius:16px; text-decoration:none; color:var(--text); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.12); position:relative; overflow:hidden; isolation:isolate; animation: slideUp .6s ease both}
+    @keyframes slideUp{from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)}}
+    .link:hover{border-color:rgba(255,255,255,.28); transform:scale(1.02)}
+    .icon{width:28px; height:28px; display:grid; place-items:center}
+    .title{font-weight:700; color:#fff}
+    .sub{font-size:12px; color:var(--muted)}
+    .shine{position:absolute; inset:auto auto 0 -20%; height:120%; width:60%; transform:rotate(20deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent); filter: blur(2px); opacity:.4}
+    .link:hover .shine{animation: shineMove 1.2s ease}
+    @keyframes shineMove{from{transform:translateX(-120%) rotate(20deg)} to{transform:translateX(220%) rotate(20deg)}}
+    .primary{background:linear-gradient(180deg, rgba(199,125,255,.32), rgba(199,125,255,.06)); border-color:rgba(199,125,255,.6)}
+
+    /* ===== Footer ===== */
+    footer{padding:12px 20px 24px; color:var(--muted); font-size:12px; text-align:center; animation: fadeIn 2s ease}
+  </style>
+</head>
+<body>
+  <!-- Galaxy Background -->
+  <div id="stars"><canvas></canvas></div>
+  <div class="aura"></div>
+
+  <div class="wrap">
+    <main class="container">
+      <header class="profile">
+        <div class="pfp" id="avatar"></div>
+        <div class="meta">
+          <div class="name">EtN Shoote ♡</div>
+          <div class="tagline">CODM GIRLY 🎀 • <span id="status-text"></span></div>
+          <div class="badges">
+            <span class="badge">Tournament Host</span>
+            <span class="badge">Anthrac¡te Fam</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="section">Featured</div>
+      <div class="grid">
+        <a class="link primary" href="https://discord.gg/RSnxbWygJq" target="_blank">
+          <div class="icon">🏆</div>
+          <div><div class="title">Anthrac¡te Tournaments</div><div class="sub">Pro Events & Scrims</div></div>
+          <span class="shine"></span>
+        </a>
+        <a class="link primary" href="https://discord.gg/HY6BKWqRKU" target="_blank">
+          <div class="icon">🎮</div>
+          <div><div class="title">Anthrac¡te Clan</div><div class="sub">CODM Clan Community</div></div>
+          <span class="shine"></span>
+        </a>
+        <a class="link" href="https://www.tiktok.com/@etnshoote" target="_blank">
+          <div class="icon">📱</div>
+          <div><div class="title">TikTok • EtN Shoote</div><div class="sub">Clips & Live Streams</div></div>
+          <span class="shine"></span>
+        </a>
+      </div>
+
+      <footer>
+        © <span id="year"></span> EtN Shoote ♡ — Made with ⚡
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Typewriter Status
+    const statusEl = document.getElementById('status-text');
+    const states = ['online','hosting tournaments','live','BR customs'];
+    let i=0, char=0, deleting=false;
+    function type(){
+      let current = states[i];
+      if(!deleting){
+        statusEl.textContent = current.substring(0,char++);
+        if(char>current.length){deleting=true; setTimeout(type,1500); return;}
+      }else{
+        statusEl.textContent = current.substring(0,char--);
+        if(char<0){deleting=false; i=(i+1)%states.length;}
+      }
+      setTimeout(type,deleting?60:120);
+    }
+    type();
+
+    // Galaxy Stars
+    const canvas = document.querySelector("#stars canvas");
+    const ctx = canvas.getContext("2d");
+    let stars = [];
+    function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+    window.addEventListener("resize",resize);resize();
+    function initStars(){stars=[];for(let i=0;i<180;i++){stars.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.2+0.3,s:Math.random()*0.4+0.1})}}
+    function drawStars(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle="white";stars.forEach(star=>{ctx.beginPath();ctx.arc(star.x,star.y,star.r,0,Math.PI*2);ctx.fill();});}
+    function updateStars(){stars.forEach(star=>{star.y+=star.s;if(star.y>canvas.height){star.y=0;star.x=Math.random()*canvas.width;}});}
+    function animate(){updateStars();drawStars();requestAnimationFrame(animate);}
+    initStars();animate();
+
+    // Avatar Explosion Particles (Violett + Cyan)
+    const avatar = document.getElementById('avatar');
+    avatar.addEventListener('click', (e)=>{
+      for(let j=0;j<18;j++){
+        let particle=document.createElement('div');
+        particle.style.position='fixed';
+        particle.style.left=e.clientX+'px';
+        particle.style.top=e.clientY+'px';
+        particle.style.width=particle.style.height='10px';
+        particle.style.background=Math.random()>0.5?'#c77dff':'#22d3ee';
+        particle.style.borderRadius='50%';
+        particle.style.pointerEvents='none';
+        document.body.appendChild(particle);
+        let angle=Math.random()*2*Math.PI, distance=Math.random()*90+20;
+        particle.animate([
+          {transform:`translate(0,0) scale(1)`,opacity:1},
+          {transform:`translate(${Math.cos(angle)*distance}px,${Math.sin(angle)*distance}px) scale(0.3)`,opacity:0}
+        ],{duration:1200+Math.random()*400,easing:'ease-out'});
+        setTimeout(()=>particle.remove(),1600);
+      }
+    });
+  </script>
+</body>
+</html>
